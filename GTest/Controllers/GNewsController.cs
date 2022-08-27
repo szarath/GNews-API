@@ -22,6 +22,7 @@ namespace GTest.Controllers
         public GNewsController(ILogger<GNewsController> logger)
         {
             _logger = logger;
+
         }
 
         /// <summary>
