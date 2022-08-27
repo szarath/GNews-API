@@ -15,14 +15,16 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
-
 - task: UseDotNet@2
   displayName: 'Use .NET 6 Core sdk'
   inputs:
     packageType: 'sdk'
-    version: '6.0.8'
+    version: '6.0.x'
     includePreviewVersions: true
+
+
+- task: NuGetToolInstaller@1
+
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
